@@ -33,7 +33,10 @@ export default function Description() {
         spacing={4} // Add some space between the grid items
         justifyContent="center"
         alignItems="center"
-        sx={{ textAlign: 'center' }} // Center text horizontally
+        sx={{
+          textAlign: 'center',
+          flexDirection: { xs: 'column', md: 'row' }, // Stack items vertically on small screens
+        }}
       >
         {/* Image Section */}
         <Grid item xs={12} md={6} lg={5}>
@@ -42,11 +45,12 @@ export default function Description() {
             src="https://i.ibb.co/WKwYKcs/Shrimp-Logo-No-Bg.png"
             alt="Example"
             sx={{
-              width: '80%', // Full width of the grid item
+              width: { xs: '60%', md: '80%' }, // Smaller width on phones
               height: 'auto', // Maintain aspect ratio
               maxHeight: '90vh', // Limit height to avoid overflow
               objectFit: 'cover', // Ensure it covers the area properly
               display: 'block',
+              mx: 'auto', // Center horizontally
             }}
           />
         </Grid>
@@ -56,9 +60,10 @@ export default function Description() {
           <Typography
             variant="h4"
             sx={{
-              fontSize: { xs: '4vw', md: '3vw', lg: '2vw' }, 
+              fontSize: { xs: '6vw', md: '3vw', lg: '2vw' }, // Adjust font size for responsiveness
               color: '#ffffff',
               mx: 'auto',
+              padding:2
             }}
           >
             ARE YOU READY TO GIVE THEM <BlinkingText>HELL</BlinkingText>?
