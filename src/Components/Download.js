@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import { Typography } from '@mui/material';
 
 export default function Download() {
   const handleDownload = () => {
@@ -17,27 +18,41 @@ export default function Download() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        paddingBottom: 15,
-        paddingTop: 15,
-      }}
-    >
-      <Button
-        variant="outlined"
+    <div>
+      <Box
         sx={{
-          fontSize: '2rem',
-          padding: '1rem 3rem',
-          color: '#ffffff',
-          borderColor: '#ffffff',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          paddingBottom: 5,
+          paddingTop: 15,
         }}
-        onClick={handleDownload}
       >
-        DOWNLOAD
-      </Button>
-    </Box>
+        
+          <Button
+            variant="outlined"
+            sx={{
+              fontSize: '1.5rem',
+              padding: '1rem 3rem',
+              color:"primary.light",
+              borderColor:"primary.light",
+              ":hover": {color: "secondary.light", borderColor: "secondary.light"}
+            }}
+            onClick={handleDownload}
+          >
+            DOWNLOAD
+          </Button>
+        </Box>
+
+        <Box sx={{justifyItems: 'center', paddingBottom: 1}}>
+        <Typography>
+          JOIN <Typography component="span" sx={{ color: 'secondary.light' }}>
+          OPEN BETA </Typography>{' '} VERSION B1.0
+        </Typography>
+        </Box>
+        <Box sx={{justifyItems: 'center', paddingBottom: 15}}>
+        <Typography>WINDOWS 10, WINDOWS 11 64 BIT</Typography>
+        </Box>
+    </div>
   );
 }

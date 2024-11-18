@@ -22,7 +22,7 @@ export default function Footer() {
           textAlign: 'left',
         }}
       >
-        Shrimp Destroyer 2 © 2024
+        Shrimp Destroyer <Typography component="span" variant="body2" sx={{color:"secondary.light"}}>2</Typography> © 2024
       </Typography>
     </Box>
   );

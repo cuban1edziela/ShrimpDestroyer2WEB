@@ -11,7 +11,7 @@ export default function Navbar({ onPlayNowClick }) {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            SHRIMP DESTROYER 2
+            SHRIMP DESTROYER <Typography component="span" variant="h6" sx={{color:"secondary.light"}}>2</Typography>
           </Typography>
           <Button
             color="inherit"
@@ -19,7 +19,9 @@ export default function Navbar({ onPlayNowClick }) {
             onClick={onPlayNowClick}
             sx={{
               '&:hover': {
-                variant: 'contained'
+                variant: 'contained',
+                color: "secondary.light", 
+                borderColor: "secondary.light"
               }
             }}
           >

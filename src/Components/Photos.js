@@ -26,8 +26,8 @@ export default function Photos() {
         <Grid item xs={12} md={6} lg={6}>
           <Box
             component="img"
-            src="https://i.ibb.co/k5GHYxw/Gameplay5.png"
-            alt="Example"
+            src="https://i.ibb.co/5hQbMQx/Gameplay8.png"
+            alt="FriendsGameplay"
             sx={{
               width: '100%', // Full width of the grid item
               height: 'auto', // Maintain aspect ratio
